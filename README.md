@@ -1,6 +1,6 @@
 # Docker Assignment — CI/CD Pipeline
 
-<!-- BUILD_INFO_START -->**Latest build:** `cafef2f` — 2026-07-14 21:44 UTC<!-- BUILD_INFO_END -->
+<!-- BUILD_INFO_START -->**Latest build:** `850b49f` — 2026-07-14 22:03 UTC<!-- BUILD_INFO_END -->
 
 Automated pipeline: `git push main` → GitHub Actions builds a Docker image → publishes to GitHub Container Registry (GHCR) with an immutable SHA tag → this README updates itself with the build info.
 
