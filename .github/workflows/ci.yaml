@@ -36,7 +36,7 @@ jobs:
           COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
-          BUILD_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
+          BUILD_TIME=$(date -u +"%Y-%m-%d %H:%M UTC+3")
           SAFE_MSG=$(echo "$COMMIT_MSG" | head -n1)
           sed -i "/<!-- BUILD_LOG -->/a - \`$SHORT_SHA\` — $SAFE_MSG — $BUILD_TIME" README.md
 
