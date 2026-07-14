@@ -31,12 +31,14 @@ jobs:
             ${{ secrets.DOCKERHUB_USERNAME }}/dockerassignment:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/dockerassignment:${{ github.sha }}
 
-      - name: Update README with latest build info
+      - name: Append build to changelog
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
           BUILD_TIME=$(date -u +"%Y-%m-%d %H:%M UTC")
-          sed -i "s|<!-- BUILD_INFO_START -->.*<!-- BUILD_INFO_END -->|<!-- BUILD_INFO_START -->**Latest build:** \`$SHORT_SHA\` — $BUILD_TIME<!-- BUILD_INFO_END -->|" README.md
-
+          SAFE_MSG=$(echo "$COMMIT_MSG" | head -n1 | tr '|' '-')
+          sed -i "/<!-- BUILD_LOG -->/a | \`$SHORT_SHA\` | $SAFE_MSG | $BUILD_TIME |" README.md
       - name: Commit updated README
         run: |
           git config user.name "github-actions[bot]"
