@@ -2,15 +2,11 @@
 
 ## Build History
 
-| Commit | Message | Time (UTC) |
-|---|---|---|
 <!-- BUILD_LOG -->
-| `84d7725` | >-< | 2026-07-14 23:11 UTC |
-| `4e3f980` | I give up, ver:8 | 2026-07-14 22:56 UTC |
-| `0124b36` | test rebase workflow | 2026-07-14 22:43 UTC |
-| `e7301b7` | Merge branch 'main' of https://github.com/RoziW/dockerassignment | 2026-07-14 22:30 UTC |
-| `f247424` | fix README markers and remove stale GHCR references | 2026-07-14 22:28 UTC |
 
+- `0124b36` — test rebase workflow — 2026-07-14 22:43 UTC
+- `e7301b7` — Merge branch 'main' of https://github.com/RoziW/dockerassignment — 2026-07-14 22:30 UTC
+- `f247424` — fix README markers and remove stale GHCR references — 2026-07-14 22:28 UTC
 Automated pipeline: `git push main` → GitHub Actions builds a Docker image → publishes to Docker Hub with an immutable SHA tag → this README updates itself with the build info.
 
 ## Why this pipeline exists
