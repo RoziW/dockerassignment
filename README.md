@@ -5,6 +5,7 @@
 | Commit | Message | Time (UTC) |
 |---|---|---|
 <!-- BUILD_LOG -->
+| `e7301b7` | Merge branch 'main' of https://github.com/RoziW/dockerassignment | 2026-07-14 22:30 UTC |
 | `f247424` | fix README markers and remove stale GHCR references | 2026-07-14 22:28 UTC |
 
 Automated pipeline: `git push main` → GitHub Actions builds a Docker image → publishes to Docker Hub with an immutable SHA tag → this README updates itself with the build info.
