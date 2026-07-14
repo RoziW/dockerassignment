@@ -5,6 +5,7 @@
 | Commit | Message | Time (UTC) |
 |---|---|---|
 <!-- BUILD_LOG -->
+| `f247424` | fix README markers and remove stale GHCR references | 2026-07-14 22:28 UTC |
 
 Automated pipeline: `git push main` → GitHub Actions builds a Docker image → publishes to Docker Hub with an immutable SHA tag → this README updates itself with the build info.
 
