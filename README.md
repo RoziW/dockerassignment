@@ -9,8 +9,8 @@ Automated pipeline: `git push main` → GitHub Actions builds a Docker image →
 To eliminate the "it works on my computer" class of bug. Every commit produces one immutable, uniquely-tagged image. Any machine — laptop, server, CI — that pulls `ghcr.io/roziw/dockerassignment:<sha>` gets the exact same bytes running on the exact same Alpine + nginx runtime.
 
 ## Pull and run
-    docker pull ghcr.io/roziw/dockerassignment:latest
-    docker run -p 8080:80 ghcr.io/roziw/dockerassignment:latest
+    docker pull <your-dockerhub-username>/dockerassignment:latest
+    docker run -p 8080:80 <your-dockerhub-username>/dockerassignment:latest
 
 Open http://localhost:8080
 
